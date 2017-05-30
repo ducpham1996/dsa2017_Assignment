@@ -1,8 +1,5 @@
 package com.dsa.manager;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.dsa.array.Stack;
 import com.dsa.files.List_Customer;
 import com.dsa.physical.Tab_Customer;

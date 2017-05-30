@@ -1,8 +1,5 @@
 package com.dsa.files;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 import com.dsa.array.Stack;
 import com.dsa.physical.Tab_Customer;
 

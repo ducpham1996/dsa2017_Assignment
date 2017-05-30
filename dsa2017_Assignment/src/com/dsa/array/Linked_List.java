@@ -1,6 +1,5 @@
 package com.dsa.array;
 
-import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -89,49 +88,6 @@ public class Linked_List<E> implements Iterable<E> {
 		}
 	}
 
-	// public void deleteAtPos(int pos) {
-	// if (pos == 1) {
-	// if (size == 1) {
-	// head = null;
-	// tail = null;
-	// size = 0;
-	// return;
-	// }
-	// head = head.next;
-	// head.prev = null;
-	// size--;
-	// return;
-	// }
-	// if (pos == size) {
-	// tail = tail.prev;
-	// tail.next = null;
-	// size--;
-	// }
-	// Node ptr = head.next;
-	// for (int i = 2; i <= size; i++) {
-	// if (i == pos) {
-	// Node p = ptr.prev;
-	// Node n = ptr.next;
-	//
-	// p.next = n;
-	// n.prev = p;
-	// size--;
-	// return;
-	// }
-	// ptr = ptr.next;
-	// }
-	// }
-
-	// public void removeAll(Linked_List<E> pl) {
-	// for (Node<E> current = this.head; current != null; current =
-	// current.next) {
-	// for (Node<E> l = pl.head; l != null; l = l.next) {
-	// if (current.data.equals(l.data)) {
-	// remove(current.data);
-	// }
-	// }
-	// }
-	// }
 
 	public void remove(E e) {
 		remove(search(e));
@@ -181,9 +137,6 @@ public class Linked_List<E> implements Iterable<E> {
 			throw new NoSuchElementException();
 		}
 		for (Node<E> current = head; current != null; current = current.next) {
-//			if (current.prev == null) {
-//				removeFirst();
-//			}
 			Node<E> pre = current.prev;
 			Node<E> next = current.next;
 			if (data != null) {
@@ -214,62 +167,7 @@ public class Linked_List<E> implements Iterable<E> {
 		size--;
 		return false;
 	}
-	// runable :D
-
-	// public E remove3(E e) {
-	// if (this.isEmpty()) {
-	// return null;
-	// }
-	// Node<E> returnNode = null;
-	// if (size == 1) {
-	// returnNode = head;
-	// head = null;
-	// tail = null;
-	// size--;
-	// return returnNode.data;
-	// }
-	// Node<E> nodeBeforeNodeToDelete = search(e).prev;
-	// if (nodeBeforeNodeToDelete == null) {
-	// head = head.next;
-	// return head.data;
-	// } else {
-	// if (nodeBeforeNodeToDelete.data != null) {
-	// if (tail.data == e) {
-	// returnNode = nodeBeforeNodeToDelete.next;
-	// nodeBeforeNodeToDelete.next = null;
-	// tail = nodeBeforeNodeToDelete;
-	// } else {
-	// returnNode = nodeBeforeNodeToDelete.next;
-	// nodeBeforeNodeToDelete.next.prev = head;
-	// nodeBeforeNodeToDelete.next = nodeBeforeNodeToDelete.next.next;
-	// }
-	// size--;
-	// }
-	//
-	// else {
-	// returnNode = head;
-	// head = head.next;
-	// // head = nodeBeforeNodeToDelete;
-	// size--;
-	// }
-	// }
-	// return returnNode.data;
-	// }
-
-	// private Node<E> findNodeBefore(E e) {
-	// if (head.data == e) {
-	// return new Node();
-	// }
-	// Node<E> node = head;
-	// while (node.next != null) {
-	// if (node.next.data == e) {
-	// return node;
-	// }
-	// node = node.next;
-	// }
-	// return null;
-	// }
-
+	
 	protected Node<E> search(E data) {
 		for (Node<E> current = this.head; current != null; current = current.next) {
 			if (current.data.equals(data)) {
@@ -352,12 +250,4 @@ class Node<E> {
 		next = null;
 	}
 
-	// @Override
-	// public int compareTo(E data) {
-	// if (data == this.data) {
-	// return 0;
-	// } else {
-	// return 1;
-	// }
-	// }
 }

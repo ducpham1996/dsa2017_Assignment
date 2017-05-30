@@ -27,13 +27,6 @@ public class Queue<E> implements Iterable<E> {
 		ll.removeFirst();
 	}
 
-	// public T remove() throws Exception {
-	// if (head == null)
-	// throw new QueueEmptyException();
-	// QueueNode<T> q = head;
-	// head = head.next;
-	// return q.infor;
-	// }
 	public Object[] toArray() {
 		Object[] o = ll.toArray();
 		return o;

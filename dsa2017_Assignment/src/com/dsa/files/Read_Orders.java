@@ -4,20 +4,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-import com.dsa.array.MyStack;
 import com.dsa.array.Queue;
-import com.dsa.array.Linked_List;
-import com.dsa.physical.Tab_Customer;
 import com.dsa.physical.Tab_Order;
-import com.dsa.physical.Tab_Product;
 
 public class Read_Orders {
 	public Queue<Tab_Order> get_all_orders() {
