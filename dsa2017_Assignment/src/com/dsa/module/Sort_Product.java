@@ -16,6 +16,7 @@ import javax.swing.SortOrder;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
+import com.dsa.array.Linked_List;
 import com.dsa.files.List_Products;
 import com.dsa.physical.Tab_Product;
 import com.dsa.tablemodel.ProductTableModel;
@@ -38,9 +39,18 @@ public class Sort_Product extends __BaseModule {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// Collections.sort(List_Products.list_products, (x, y) ->
-				// x.getPcode().compareTo(y.getPcode()));
-				ProductTableModel ptm = new ProductTableModel(List_Products.list_products,
+				Linked_List<Tab_Product> temp = List_Products.list_products;
+				Tab_Product[] products = new Tab_Product[temp.size()];
+
+				for (int i = 0; i < temp.size(); i++) {
+					products[i] = temp.get(i);
+				}
+				insertionSort(products);
+				temp = new Linked_List<>();
+				for(Tab_Product p : products){
+					temp.add(p);
+				}
+				ProductTableModel ptm = new ProductTableModel(temp,
 						new String[] { "Code", "Name", "Price", "Quantity", "Sale" },
 						new Class[] { String.class, String.class, Double.class, Integer.class, Integer.class });
 				table.setModel(ptm);
