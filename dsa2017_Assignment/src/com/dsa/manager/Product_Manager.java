@@ -1,22 +1,11 @@
 package com.dsa.manager;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.dsa.array.Linked_List;
 import com.dsa.files.List_Products;
 import com.dsa.physical.Tab_Product;
 
 public class Product_Manager {
-	// public boolean isCodeExist(String pcode) {
-	// boolean found = false;
-	// for (Tab_Product tp : List_Products.list_products) {
-	// if (tp.getPcode().equals(pcode)) {
-	// found = true;
-	// }
-	// }
-	// return found;
-	// }
+
 	public boolean isCodeExist(String pcode) {
 		boolean found = false;
 		for (int i = 0; i < List_Products.list_products.size(); i++) {
