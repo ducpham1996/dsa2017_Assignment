@@ -26,7 +26,7 @@ public class Product_Manager {
 		}
 		return saled;
 	}
-
+//Search product
 	public Linked_List<Tab_Product> search_product(String pcode) {
 		Linked_List<Tab_Product> lp = new Linked_List<>();
 		for (int i = 0; i < List_Products.list_products.size(); i++) {
