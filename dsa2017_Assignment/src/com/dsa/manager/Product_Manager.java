@@ -27,7 +27,6 @@ public class Product_Manager {
 		return saled;
 	}
 
-	// Search product bla bla
 	public Linked_List<Tab_Product> search_product(String pcode) {
 		Linked_List<Tab_Product> lp = new Linked_List<>();
 		for (int i = 0; i < List_Products.list_products.size(); i++) {
@@ -38,6 +37,17 @@ public class Product_Manager {
 		}
 		return lp;
 	}
+
+	// public Product_List<Tab_Product> search_product(String pcode) {
+	// Product_List<Tab_Product> lp = new Product_List<>();
+	// for (Tab_Product p : List_Products.list_products) {
+	// if (p.getPcode().contains(pcode)) {
+	// // System.out.println(p);
+	// lp.add(p);
+	// }
+	// }
+	// return lp;
+	// }
 
 	public void remove_product(Linked_List<Tab_Product> remove_list) {
 		// for (int i = 0; i < List_Products.list_products.size(); i++) {
