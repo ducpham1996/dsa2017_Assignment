@@ -40,16 +40,6 @@ public class Product_Manager {
 
 
 	public void remove_product(Linked_List<Tab_Product> remove_list) {
-		// for (int i = 0; i < List_Products.list_products.size(); i++) {
-		// Tab_Product p = List_Products.list_products.get(i);
-		// for (int k = 0; k < remove_list.size(); k++) {
-		// Tab_Product p2 = remove_list.get(k);
-		// //System.out.println(p2.getPcode());
-		// if (p.getPcode().equals(p2.getPcode())) {
-		// List_Products.list_products.remove(p);;
-		// }
-		// }
-		// }
 		for (Tab_Product p : remove_list) {
 			List_Products.list_products.remove(p);
 		}
