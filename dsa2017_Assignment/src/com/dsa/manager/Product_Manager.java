@@ -5,7 +5,7 @@ import com.dsa.files.List_Products;
 import com.dsa.physical.Tab_Product;
 
 public class Product_Manager {
-
+//check code is existed
 	public boolean isCodeExist(String pcode) {
 		boolean found = false;
 		for (int i = 0; i < List_Products.list_products.size(); i++) {
