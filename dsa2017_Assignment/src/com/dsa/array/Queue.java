@@ -6,7 +6,7 @@ import java.util.NoSuchElementException;
 public class Queue<E> implements Iterable<E> {
 
 	Linked_List<E> ll;
-	
+	//check is empty
 	public boolean isEmpty(){
 		return ll.isEmpty();
 	}
